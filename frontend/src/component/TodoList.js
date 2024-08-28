@@ -29,7 +29,7 @@ const TodoList = () => {
   };
 
   const editTask = (taskId, newName) => {
-    
+
     const updatedTasks = tasks.map(task =>
       task.id === taskId ? { ...task, name: newName } : task
     );
@@ -40,10 +40,9 @@ const TodoList = () => {
     <div className="container mt-5">
       <h1 className="mb-4">Add Data</h1>
       <div className="mb-3">
-        <input type="text"  placeholder="Enter Data "
-          value={newTaskName} onChange={handleInputChange}
+        <input type="text"  placeholder="Enter Data " value={newTaskName} onChange={handleInputChange}
         />
-        <button className="btn btn-primary ml-2" onClick={addTask}>Add Task</button>
+        <button className="btn btn-primary ml-2 m-2" onClick={addTask}>Add Task</button>
       </div>
       <ul className="list-group">
         {tasks.map(task => (

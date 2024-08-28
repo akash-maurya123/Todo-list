@@ -17,16 +17,9 @@ const TodoItem = ({ task, onDelete, onEdit }) => {
 
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center">
-      {isEditing ? (
-        <input  type="text"
+      {isEditing ? (<input  type="text" value={newTaskName} onChange={handleInputChange}/>)
+       : (task.name )}
        
-          value={newTaskName}   onChange={handleInputChange}
-        />
-      ) : (
-        task.name
-      )}
-
-
       <div>
 
         {isEditing ? (
